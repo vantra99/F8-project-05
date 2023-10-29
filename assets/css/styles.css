@@ -109,6 +109,7 @@ a {
   margin-top: 133px;
 }
 .group-header__title {
+  display: inline-block;
   position: relative;
   color: #696d77;
   font-size: 1.6rem;
@@ -124,7 +125,7 @@ a {
   left: 0;
   width: 18px;
   height: 2px;
-  background: #696d77;
+  background: currentColor;
 }
 
 .group-header__heading {
@@ -770,6 +771,7 @@ a {
   width: 104px;
   height: 104px;
   border-radius: 99px;
+  overflow: hidden;
   background-color: #000;
 }
 .clients-avarta img {
@@ -851,7 +853,7 @@ a {
   object-fit: cover;
 }
 .blog-item__text {
-  width: 332px;
+  width: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -875,4 +877,75 @@ a {
   font-weight: 400;
   line-height: 1.62;
   padding-top: 20px;
+}
+
+/* ======= Download ========== */
+.download {
+  padding-top: 160px;
+}
+.download-inner {
+  position: relative;
+  height: 466px;
+  border-radius: 24px;
+  background: #7264d6;
+  text-align: center;
+  padding: 100px 0;
+}
+.download-heading__title,
+.download-heading__header,
+.download-heading__desc {
+  color: #fff;
+}
+.download-app {
+  display: inline-flex;
+  column-gap: 16px;
+}
+.download-app .app {
+  text-align: left;
+  width: 182px;
+  height: 64px;
+  background-color: #fff;
+  color: #7264d6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 5px;
+  border-radius: 8px;
+  margin-top: 38px;
+}
+.app__icon {
+  width: 25px;
+  height: 25px;
+}
+.app__icon svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.app__text__title {
+  font-size: 1rem;
+}
+.app__text__name {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.download-star {
+  position: absolute;
+}
+.download-star:nth-last-child(4) {
+  top: 49px;
+  left: 112px;
+}
+.download-star:nth-last-child(3) {
+  top: 49px;
+  right: 112px;
+}
+.download-star:nth-last-child(2) {
+  bottom: 49px;
+  left: 166px;
+}
+.download-star:nth-last-child(1) {
+  bottom: 49px;
+  right: 166px;
 }

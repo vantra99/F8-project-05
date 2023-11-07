@@ -4,24 +4,101 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>F8-project-05</title>
-    <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/font/stylesheet.css" />
-    <link rel="stylesheet" href="./assets/css/animation@keyframe.css" />
-    <link rel="stylesheet" href="./assets/css/grid.css" />
-    <link rel="stylesheet" href="./assets/css/styles.css" />
-    <link rel="stylesheet" href="./assets/css/responsive.css" />
+    <!-- favicon -->
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href=".assets/favicon/apple-icon-57x57.png"
     />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href=".assets/favicon/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href=".assets/favicon/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href=".assets/favicon/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href=".assets/favicon/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href=".assets/favicon/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href=".assets/favicon/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href=".assets/favicon/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href=".assets/favicon/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href=".assets/favicon/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href=".assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href=".assets/favicon/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href=".assets/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href=".assets/favicon/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta
+      name="msapplication-TileImage"
+      content=".assets/favicon/ms-icon-144x144.png"
+    />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- <link rel="stylesheet" href="./assets/css/animation@keyframe.css" /> -->
+
+    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
+
+    <link rel="stylesheet" href="./assets/css/main.css" />
   </head>
   <body>
     <header class="header">
       <div class="container">
-        <div class="row">
-          <div class="col-xl-12">
+        <div class="row row-cols-lg-1 row-cols-md-1">
+          <div class="col">
             <div class="header-inner">
+              <label for="menu" class="header-inner__menu">
+                <img src="./assets/img/menu.svg" alt="menu" class="menu-icon" />
+              </label>
+
               <a href="#" class="logo">
                 <figure class="logo-svg">
                   <svg
@@ -70,12 +147,30 @@
         </div>
       </div>
     </header>
+    <div class="group-overflow">
+      <input type="checkbox" id="menu" class="menu-input" hidden />
+      <div class="overflow" for="menu">
+        <div class="overflow-nav">
+          <nav class="overflow-nav__navbar">
+            <a href="#!" class="navbar-item active">Home</a>
+            <a href="#!" class="navbar-item">Products</a>
+            <a href="#!" class="navbar-item">Features</a>
+            <a href="#!" class="navbar-item">Blog</a>
+            <a href="#!" class="login">Log In</a>
+            <a href="#!" class="signup btn">Sign Up</a>
+          </nav>
+        </div>
+        <label class="close" for="menu">
+          <img src="./assets/img/close.svg" alt="close" />
+        </label>
+      </div>
+    </div>
     <div class="container">
       <!-- hero -->
       <div class="hero">
-        <div class="row">
+        <div class="row gy-md-3 row-cols-lg-2 row-cols-md-2 row-cols-1">
           <section
-            class="hero-text col-xl-6 col-12"
+            class="hero-text col"
             data-aos="fade-right"
             data-aos-duration="1500"
           >
@@ -90,7 +185,7 @@
               </h1>
             </div>
             <p
-              class="hero-desc"
+              class="hero-text__desc"
               data-aos="fade-right"
               data-aos-duration="1500"
               data-aos-delay="200"
@@ -101,22 +196,24 @@
             </p>
             <form
               action=""
-              class="hero-form"
+              class="hero-text__form"
               data-aos="fade-right"
               data-aos-duration="1500"
               data-aos-delay="400"
             >
               <input
                 type="text"
-                class="form-input"
+                class="hero__form__input"
                 placeholder="Your email address"
                 required
                 pattern=""
               />
-              <button type="submit" class="form-submit btn">Get Started</button>
+              <button type="submit" class="hero__form__submit btn">
+                Get Started
+              </button>
             </form>
             <p
-              class="hero-noted"
+              class="hero-text__noted"
               data-aos="fade-right"
               data-aos-duration="1500"
               data-aos-delay="600"
@@ -124,7 +221,7 @@
               *We’ll respect the inbox and never share your email.
             </p>
           </section>
-          <figure class="hero-photo col-xl-6 col-12">
+          <figure class="hero-photo">
             <img
               src="./assets/img/Mobile Screen.png"
               alt="phone"
@@ -201,8 +298,8 @@
       </div>
       <!-- works -->
       <div class="works">
-        <div class="row">
-          <figure class="works-photo col-xl-6 col-12">
+        <div class="row row-cols-lg-2 row-cols-md-2 row-cols-1">
+          <figure class="works-photo col">
             <img
               src="./assets/img/bg-people.svg"
               alt=""
@@ -253,7 +350,7 @@
               </div>
             </figure>
           </figure>
-          <section class="works-text col-xl-5 offset-xl-1 col-12">
+          <section class="works-text col">
             <p
               class="group-header__title"
               data-aos="fade-left"
@@ -299,13 +396,9 @@
       </div>
       <!-- Card-->
       <div class="card">
-        <div class="row">
-          <section class="card-text col-xl-5 col-12">
-            <p
-              class="group-header__title"
-              data-aos="fade-right"
-              data-aos-delay="100"
-            >
+        <div class="row row-cols-md-2 row-cols-1">
+          <section class="card-text col-lg-5 col-12">
+            <p class="card-title" data-aos="fade-right" data-aos-delay="100">
               Digital Smart Wallet
             </p>
             <h1 class="card-heading" data-aos="fade-right" data-aos-delay="200">
@@ -316,20 +409,20 @@
               apps that accept payments and send payouts globally. We are the
               best platform.
             </p>
-            <span class="card-title" data-aos="fade-right" data-aos-delay="300"
+            <span class="card-span" data-aos="fade-right" data-aos-delay="300"
               >Global Payments</span
             >
-            <span class="card-title" data-aos="fade-right" data-aos-delay="300"
+            <span class="card-span" data-aos="fade-right" data-aos-delay="300"
               >One-Click Purchase</span
             >
-            <span class="card-title" data-aos="fade-right" data-aos-delay="300"
+            <span class="card-span" data-aos="fade-right" data-aos-delay="300"
               >Friendly Price</span
             >
             <a href="#!" class="card-btn btn" data-aos="fade-right"
               >Get Started</a
             >
           </section>
-          <figure class="card-photo col-xl-6 offset-xl-1 col-12">
+          <figure class="card-photo col-lg-6 offset-lg-1 col-12">
             <div class="card-group">
               <p class="card-name">Main Balance</p>
               <p class="card-dollar">$78,355.17</p>
@@ -344,21 +437,21 @@
                 <div class="card-circle__2"></div>
               </div>
               <div class="circle-group">
-                <div class="offset-circle"></div>
-                <div class="offset-circle"></div>
-                <div class="offset-circle"></div>
-                <div class="offset-circle"></div>
-                <div class="offset-circle"></div>
+                <div class="circle-offset"></div>
+                <div class="circle-offset"></div>
+                <div class="circle-offset"></div>
+                <div class="circle-offset"></div>
+                <div class="circle-offset"></div>
               </div>
               <div class="circle-group">
-                <div class="offset-circle"></div>
-                <div class="offset-circle"></div>
-                <div class="offset-circle"></div>
-                <div class="offset-circle"></div>
-                <div class="offset-circle"></div>
-                <div class="offset-circle"></div>
-                <div class="offset-circle"></div>
-                <div class="offset-circle"></div>
+                <div class="circle-offset"></div>
+                <div class="circle-offset"></div>
+                <div class="circle-offset"></div>
+                <div class="circle-offset"></div>
+                <div class="circle-offset"></div>
+                <div class="circle-offset"></div>
+                <div class="circle-offset"></div>
+                <div class="circle-offset"></div>
               </div>
             </div>
             <div
@@ -483,8 +576,8 @@
       </div>
       <!-- wallet -->
       <div class="wallet">
-        <div class="row">
-          <div class="wallet-photo col-xl-6 col-12">
+        <div class="row row-cols-md-2 row-cols-1">
+          <div class="wallet-photo col-lg-6">
             <div class="wallet-bg"></div>
             <figure
               class="wallet-people"
@@ -792,29 +885,38 @@
             </figure>
           </div>
 
-          <section class="wallet-text col-xl-5 offset-xl-1 col-12">
-            <p
-              class="group-header__title"
-              data-aos="fade-left"
-              data-aos-delay="100"
-            >
+          <section class="wallet-text col-lg-5 offset-lg-1">
+            <p class="wallet-title" data-aos="fade-left" data-aos-delay="100">
               Digital Smart Wallet
             </p>
-            <h1 class="card-heading" data-aos="fade-left" data-aos-delay="200">
+            <h1
+              class="wallet-heading"
+              data-aos="fade-left"
+              data-aos-delay="200"
+            >
               One Card For All Your Payments
             </h1>
-            <p class="card-desc" data-aos="fade-left" data-aos-delay="300">
+            <p class="wallet-desc" data-aos="fade-left" data-aos-delay="300">
               We bring together eveything that’s required to build websites and
               apps that accept payments and send payouts globally. We are the
               best platform.
             </p>
-            <span class="card-title" data-aos="fade-left" data-aos-delay="300"
+            <span
+              class="card-span wallet-span"
+              data-aos="fade-left"
+              data-aos-delay="300"
               >Global Payments</span
             >
-            <span class="card-title" data-aos="fade-left" data-aos-delay="300"
+            <span
+              class="card-span wallet-span"
+              data-aos="fade-left"
+              data-aos-delay="300"
               >One-Click Purchase</span
             >
-            <span class="card-title" data-aos="fade-left" data-aos-delay="300"
+            <span
+              class="card-span wallet-span"
+              data-aos="fade-left"
+              data-aos-delay="300"
               >Friendly Price</span
             >
             <a href="#!" class="card-btn btn" data-aos="fade-left"
@@ -826,19 +928,15 @@
       <!-- Clients -->
       <div class="clients">
         <div class="clients-top">
-          <div class="row">
-            <div class="col-xl-12">
+          <div class="row row-cols-1">
+            <div class="col">
               <div
                 class="clients-top__inner"
                 data-aos="fade-down"
                 data-aos-duration="1500"
               >
-                <p class="clients__inner__title group-header__title">
-                  Our Testimonial
-                </p>
-                <h1 class="clients__inner__heading card-heading">
-                  What Clients Says
-                </h1>
+                <p class="clients__inner__title">Our Testimonial</p>
+                <h1 class="clients__inner__heading">What Clients Says</h1>
                 <p class="clients__inner__desc">
                   Read what clients says about us and about our online banking
                   services that may inspire you
@@ -848,8 +946,8 @@
           </div>
         </div>
         <div class="clients-body">
-          <div class="row">
-            <div class="col-xl-6">
+          <div class="row row-cols-lg-2 row-cols-1 gy-md-4 gy-3">
+            <div class="col">
               <div
                 class="clients-body__left"
                 data-aos="fade-right"
@@ -871,7 +969,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-xl-6">
+            <div class="col">
               <div
                 class="clients-body__right"
                 data-aos="fade-left"
@@ -905,22 +1003,22 @@
       </div>
       <!-- Blog -->
       <div class="blog">
-        <div class="row">
-          <div class="col-xl-6">
+        <div class="row row-cols-lg-2 row-cols-1">
+          <div class="col">
             <div
               class="blog-header"
               data-aos="fade-right"
               data-aos-duration="1500"
             >
-              <p class="group-header__title">Our Testimonial</p>
-              <h1 class="card-heading">What Clients Says</h1>
-              <p class="clients__inner__desc">
+              <p class="blog-title">Our Testimonial</p>
+              <h1 class="blog-heading">What Clients Says</h1>
+              <p class="blog-desc">
                 Read what clients says about us and about our online banking
                 services that may inspire you
               </p>
             </div>
           </div>
-          <div class="col-xl-6">
+          <div class="col">
             <div
               class="blog-btn"
               data-aos="fade-left"
@@ -932,9 +1030,9 @@
           </div>
         </div>
         <div class="blog-group">
-          <div class="row">
+          <div class="row row-cols-lg-2 gy-lg-3 row-cols-1 gy-2">
             <!-- item 01 -->
-            <div class="col-xl-6">
+            <div class="col">
               <section
                 class="blog-item"
                 data-aos="fade-right"
@@ -955,7 +1053,7 @@
               </section>
             </div>
             <!-- item 02 -->
-            <div class="col-xl-6">
+            <div class="col">
               <section
                 class="blog-item"
                 data-aos="fade-left"
@@ -975,12 +1073,8 @@
                 </div>
               </section>
             </div>
-          </div>
-        </div>
-        <div class="blog-group">
-          <div class="row">
             <!-- item 03 -->
-            <div class="col-xl-6">
+            <div class="col">
               <section
                 class="blog-item"
                 data-aos="fade-right"
@@ -1001,7 +1095,7 @@
               </section>
             </div>
             <!-- item 04 -->
-            <div class="col-xl-6">
+            <div class="col">
               <section
                 class="blog-item"
                 data-aos="fade-left"
@@ -1026,17 +1120,13 @@
       </div>
       <!-- download -->
       <div class="download">
-        <div class="row">
-          <div class="col-xl-12">
+        <div class="row row-cols-1">
+          <div class="col">
             <div class="download-inner">
-              <div class="download-heading">
-                <p class="group-header__title download-heading__title">
-                  Our App
-                </p>
-                <h1 class="card-heading download-heading__header">
-                  Download the Apps
-                </h1>
-                <p class="clients__inner__desc download-heading__desc">
+              <div class="download-inner__heading">
+                <p class="download-title">Our App</p>
+                <h1 class="download-heading">Download the Apps</h1>
+                <p class="download-desc">
                   Download our mobile apps and get started today with a special
                   online bank and move faster
                 </p>
@@ -1168,10 +1258,10 @@
     <!-- footer -->
     <footer class="footer">
       <div class="container">
-        <div class="row">
-          <div class="footer-inner">
-            <div class="footer-col">
-              <a href="#!" class="footer__logo logo">
+        <div class="footer-inner">
+          <div class="row gy-md-3 gy-sm-2">
+            <div class="footer-col col-lg-2 col-md-4 col-12">
+              <a href="#!" class="footer__logo">
                 <figure class="logo-svg">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -1208,7 +1298,7 @@
                 >email@gmail.com</a
               >
             </div>
-            <div class="footer-col">
+            <div class="footer-col col-lg-3 col-md-4 col-12">
               <p class="footer-title">Sitemap</p>
               <a href="#!" class="footer-item">Home </a>
               <a href="#!" class="footer-item">Abouts</a>
@@ -1219,14 +1309,14 @@
                 >(123) 456-7890</a
               >
             </div>
-            <div class="footer-col">
+            <div class="footer-col col-lg-3 col-md-4 col-12">
               <p class="footer-title">Socials</p>
               <a href="#!" class="footer-item">Facebook</a>
               <a href="#!" class="footer-item">Linkedin</a>
               <a href="#!" class="footer-item">Instagram</a>
               <a href="#!" class="footer-item">Twitter</a>
             </div>
-            <div class="footer-col">
+            <div class="footer-col col-lg-4 col-md-12 col-12">
               <p class="footer-title">Head Office</p>
               <p class="footer-desc">
                 Xilliams Corner Wine © 2017. 1112 A Market St # Ste B22,
@@ -1253,10 +1343,13 @@
           </div>
         </div>
       </div>
+      <div class="row">
+        <small class="copyright">
+          © 2020 Ligft Media All rights reserved.
+        </small>
+      </div>
     </footer>
-    <div class="row">
-      <small class="copyright"> © 2020 Ligft Media All rights reserved. </small>
-    </div>
+
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();

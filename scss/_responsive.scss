@@ -1,0 +1,360 @@
+/* Large devices (desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+  .header-inner__menu,
+  .group-overflow {
+    display: none;
+  }
+}
+
+/* Tablet & Mobile */
+@media screen and (max-width: 991.98px) {
+  .header-inner {
+    justify-content: space-between;
+    .navbar {
+      margin-left: 0;
+    }
+    .group-btn {
+      margin-left: 0;
+    }
+  }
+  .hero {
+    &-text {
+      * {
+        width: 100%;
+      }
+      .group-header__heading {
+        font-size: 5rem;
+      }
+      .hero__form__submit {
+        position: initial;
+        margin-top: 10px;
+        width: 100%;
+      }
+    }
+    &-photo {
+      display: none;
+    }
+    &-text {
+      padding-top: 30px;
+    }
+    .hero__form__input {
+      width: 100%;
+      padding: 0 10px;
+      font-size: 1.8rem;
+      height: 60px;
+    }
+    .group-circle,
+    .rectage-left,
+    .rectage-right {
+      display: none;
+    }
+  }
+  .works {
+    padding-top: 50px;
+  }
+  .card {
+    padding-top: 50px;
+  }
+  .wallet {
+    padding-top: 50px;
+  }
+  .clients {
+    padding-top: 50px;
+    .clients-text {
+      height: auto;
+    }
+  }
+  .download {
+    .download-star {
+      display: none;
+    }
+    .download-inner {
+      height: 300px;
+      padding: 15px;
+    }
+  }
+  .blog {
+    padding-top: 50px;
+  }
+  .download {
+    padding-top: 50px;
+  }
+  .footer {
+    margin-top: 0;
+    &__email {
+      margin-top: 0;
+      justify-content: flex-start;
+      margin-top: 25px;
+    }
+    &__tel {
+      margin-top: 0;
+    }
+    .footer-col {
+      min-height: auto;
+    }
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .header-inner__menu,
+  .group-overflow {
+    display: none;
+  }
+  .hero {
+    padding-top: 50px;
+    .hero-text {
+      margin-top: auto;
+    }
+    .group-header__heading {
+      font-size: 3.5rem;
+    }
+    .hero-text__desc {
+      width: 100%;
+      text-align: justify;
+    }
+
+    .hero-photo {
+      margin-top: 30px;
+      display: flex;
+      margin-left: auto;
+
+      .hero-photo__phone {
+        margin-left: auto;
+      }
+    }
+  }
+  .works {
+    &-photo {
+      .works-people {
+        transform-origin: 0 100%;
+        transform: scale(0.8);
+      }
+      .bg-photo {
+        display: none;
+      }
+    }
+    .works-people {
+      left: 0;
+    }
+    .works-congra,
+    .works-rectage {
+      display: none;
+    }
+    .works-group {
+      margin-top: 30px;
+      .item-title,
+      .item-desc {
+        width: 100%;
+      }
+    }
+  }
+  .card {
+    .card-group {
+      rotate: 90deg;
+      transform: translateY(76px);
+    }
+    .rectage-money,
+    .rectage-income {
+      display: none;
+    }
+  }
+  .wallet {
+    .wallet-bg,
+    .wallet-circle,
+    .wallet-payment {
+      display: none;
+    }
+    .wallet-people {
+      left: 0;
+      transform-origin: 0;
+      transform: scale(0.8);
+      position: initial;
+    }
+  }
+  .blog {
+    .blog-desc {
+      width: 80%;
+    }
+    .blog-group {
+      margin-top: 50px;
+    }
+    .blog-btn {
+      justify-content: flex-start;
+      margin-top: 20px;
+    }
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media screen and (max-width: 767.98px) {
+  .header-inner {
+    justify-content: flex-start;
+    .header-inner__menu {
+      width: 30px;
+      height: 30px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .logo {
+      margin-left: 90px;
+    }
+    .logo-text {
+      font-size: 2.5rem;
+      font-weight: 600;
+    }
+    .navbar,
+    .group-btn {
+      display: none;
+    }
+  }
+  .overflow {
+    width: 100vw;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    padding-top: 60px;
+    visibility: hidden;
+    transform: translateX(-100vw);
+    transition: 0.5s linear;
+  }
+  .overflow-nav {
+    &__navbar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      a {
+        font-size: 3rem;
+        color: #fff;
+      }
+      a + a {
+        margin-top: 30px;
+      }
+      a:last-child {
+        background-color: #fff;
+        color: #000;
+      }
+    }
+  }
+  .close {
+    display: inline-block;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: 50px;
+    width: 100px;
+    height: 100px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .menu-input:checked ~ .overflow {
+    visibility: visible;
+    transform: translateX(0);
+  }
+  .hero {
+    .group-header__heading {
+      width: 100%;
+    }
+  }
+  .works {
+    &-photo {
+      display: none;
+    }
+    .works-text {
+      .item-title,
+      .item-desc {
+        width: 100%;
+      }
+    }
+    .works-group {
+      margin-top: 20px;
+    }
+  }
+  .card {
+    &-group,
+    .rectage-income,
+    .rectage-money {
+      display: none;
+    }
+    .card-btn {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  .wallet {
+    &-photo {
+      display: none;
+    }
+    .card-btn {
+      width: 100%;
+      text-align: center;
+    }
+    .wallet-text {
+      margin-top: 0;
+    }
+  }
+  .clients {
+    .clients-top__inner {
+      > * {
+        width: 100%;
+        text-align: left;
+      }
+    }
+  }
+  .blog {
+    .blog-btn {
+      margin-top: 10px;
+      text-align: center;
+      > * {
+        width: 100%;
+      }
+    }
+    .blog-item {
+      padding: 5px;
+    }
+  }
+  .download {
+    .download-inner {
+      height: auto;
+      border-radius: 14px;
+    }
+    .download-inner__heading {
+      * {
+        width: 100%;
+        text-align: left;
+      }
+    }
+    .download-app {
+      flex-wrap: wrap;
+      width: 100%;
+      > * {
+        width: 100%;
+        margin-top: 10px;
+      }
+    }
+  }
+  .footer {
+    &-inner {
+      padding-top: 50px;
+    }
+    &-col {
+      min-height: auto;
+    }
+  }
+  .footer {
+    .footer__form__input,
+    .footer__form__submit {
+      width: 100%;
+    }
+    .footer__form__submit {
+      margin-top: 10px;
+    }
+  }
+}

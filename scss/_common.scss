@@ -1,0 +1,19 @@
+/* common */
+a {
+  text-decoration: none;
+}
+
+.btn {
+  display: inline-block;
+  border-radius: 6px;
+  background: #212832;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.75;
+  padding: 12px 28px;
+  transition: opacity 0.3s linear;
+}
+.btn:hover {
+  opacity: 0.8;
+}
